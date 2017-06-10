@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this.props.children</title>
+	<script src='build/react.js'></script>
+	<script src='build/react-dom.js'></script>
+	<script src='build/browser.min.js'></script>
+</head>
+<body>	
+	<div id='example'></div>
+
+	<script type='text/babel'>
+		
+		class HellowMessage extends React.Component {
+			render (){
+				return <ol>
+					{
+						React.Children.map(this.props.children,(item) => {
+							return <li>{item}</li>
+						})
+					}
+				</ol>
+			}
+		}
+		
+
+		ReactDOM.render(
+			<HellowMessage>
+				<span>hello</span>
+				<span>world</span>
+			</HellowMessage>,
+			document.getElementById('example')
+		)
+
+
+	</script>
+
+
+	
+</body>
+</html>

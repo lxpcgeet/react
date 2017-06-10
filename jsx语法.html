@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jsx语法</title>
+	<script src='build/react.js'></script>
+	<script src='build/react-dom.js'></script>
+	<script src='build/browser.min.js'></script>
+</head>
+<body>
+
+	ReactDOM.render() 里边的html 一定要有一个元素包起来
+
+	<div id='example'></div>
+	<!--这个写法会报一个错误-->
+	<!-- <script type='text/babel'>
+		var names = ['guotingting','lixiaopeng','liyu','libuke']
+
+		ReactDOM.render(
+			<div>
+				{
+					names.map((item,index) => {
+						return <div>hellow ,{item}</div>
+					})
+				}
+			</div>,
+			document.getElementById('example')
+		)
+	</script> -->
+
+	<script type='text/babel'>
+		var arr = [
+			<h1>你好 我是h1</h1>,
+			<h2>你好，我是h2</h2>
+		]
+
+		ReactDOM.render(
+			<div>{arr}</div>,
+			document.getElementById('example')
+		)
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件</title>
+	<script src='build/react.js'></script>
+	<script src='build/react-dom.js'></script>
+	<script src='build/browser.min.js'></script>
+</head>
+<body>
+
+<!--React.createClass()方法就用于生成一个组件类-->
+
+	<div id='example'></div>
+
+	<!--ES5的写法-->
+	<!-- var HellowMessage = React.createClass({
+		render: function(){
+			return <h1>hello,{this.props.name}</h1>;
+		}
+	}) -->
+
+	<!--ES6的写法-->
+	<script type='text/babel'>
+		
+		
+
+		class HellowMessage extends React.Component {
+			render() {
+				return <h1>hello {this.props.name}</h1>
+			}
+		}
+
+		ReactDOM.render(
+			<HellowMessage name='lixiaopeng'/>,
+			document.getElementById('example')
+		)
+
+	</script>
+	
+</body>
+</html>
